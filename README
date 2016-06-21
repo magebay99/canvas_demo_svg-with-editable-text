@@ -1,0 +1,10 @@
+README
+
+This repository demonstrates how to use fabric.js to add SVG element to canvas and how to manipulate Text objects created inside it. We handle double click event to make the shape editable.
+
+
+Demo used the following libraries
+
+jQuery
+fabric.js
+fabric.ext
