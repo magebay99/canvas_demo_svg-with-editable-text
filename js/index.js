@@ -4,10 +4,10 @@
 
   // Define your SVG elements
   // You can read these from the DOM or from a web api
-  var ChatBubbleSVG = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">'+
+
+  var SquareSVG = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">'+
   '<g>'+
-  '<path d="M88.912,0L10.615,0.02C4.728,0.227,0,5.066,0,11.003v46.953c0,6.07,4.936,11.005,11.003,11.005h17.516v26.436  c0,1.156,0.662,2.21,1.703,2.714c0.417,0.2,0.864,0.299,1.31,0.299c0.668,0,1.332-0.221,1.874-0.653l33.233-28.795h22.273  c6.068,0,11.006-4.935,11.006-11.005V11.003C99.918,4.936,94.98,0,88.912,0z M94.179,57.956c0,2.905-2.362,5.266-5.267,5.266H65.577  c-0.023-0.006-0.958-0.013-1.534-0.017l-29.498,25.95V71.474v-2.299v-5.976c-2.223,0.007-3.608,0.015-3.647,0.022H11.003  c-2.902,0-5.264-2.36-5.264-5.266V11.003c0-2.902,2.362-5.264,5.264-5.264h77.909c2.904,0,5.267,2.362,5.267,5.264V57.956z">'+
-  '</path>'+
+  '<rect width="100" height="100" fill="#fff" />'+
   '<text text-anchor="middle" x="50" y="40" font-family="Verdana" font-size="12">'+
   '  Hello BBC  '+
   '</text>'+
@@ -22,6 +22,131 @@
   '</text>'+
   '</g>'+
   '</svg>';
+
+  // Sharp edged solid rectangular chat bubble with bottom right pointer
+  var ChatBubbleSVG_1 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path fill="#fff" stroke="#000" stroke-width="0.5"  d="M 24,1 0,1 0,18 14.101695,18 18.305085,22.399136 18.338983,18 24,18 z"/>'+
+  '<text text-anchor="middle" x="12" y="10" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Sharp edged solid rectangular chat bubble with bottom center pointer
+  // Based on http://iconmonstr.com/speech-bubble-21/
+  var ChatBubbleSVG_2 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path fill="#fff" stroke="#000" stroke-width="0.5"  d="M24 1h-24v17h8l4 5.111 4-5.111h8z"/>'+
+  '<text text-anchor="middle" x="12" y="10" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Sharp edged solid rectangular chat bubble with top center pointer
+  // Based on http://iconmonstr.com/speech-bubble-21/
+  var ChatBubbleSVG_2f = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path fill="#fff" stroke="#000" stroke-width="0.5"  d="m 0,23.111 24,0 0,-17 -8,0 L 12,1 8,6.111 l -8,0 z"/>'+
+  '<text text-anchor="middle" x="12" y="15" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Sharp edged solid rectangular chat bubble with bottom left pointer
+  // Based on http://iconmonstr.com/speech-bubble-15/
+  var ChatBubbleSVG_3 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path fill="#fff" stroke="#000" stroke-width="0.5"  d="M24 1h-24v16.981h4v5.019l7-5.019h13z"/>'+
+  '<text text-anchor="middle" x="12" y="10" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Sharp edged solid rectangular chat bubble with top left pointer
+  // Based on http://iconmonstr.com/speech-bubble-15/
+  var ChatBubbleSVG_3f = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path fill="#fff" stroke="#000" stroke-width="0.5"  d="M 24,23 H 0 V 6.019 H 4 V 1 l 7,5.019 h 13 z"/>'+
+  '<text text-anchor="middle" x="12" y="15" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Sharp edged solid rectangular chat bubble with bottom right pointer
+  // Based on http://iconmonstr.com/speech-bubble-15/
+  var ChatBubbleSVG_4 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path fill="#fff" stroke="#000" stroke-width="0.5"  d="M 0,1 H 24 V 17.981 H 20 V 23 L 13,17.981 H 0 z"/>'+
+  '<text text-anchor="middle" x="12" y="10" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Sharp edged solid rectangular chat bubble with top right pointer
+  // Based on http://iconmonstr.com/speech-bubble-15/
+  var ChatBubbleSVG_4f = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path fill="#fff" stroke="#000" stroke-width="0.5"  d="M 0,23 H 24 V 6.019 H 20 V 1 L 13,6.019 H 0 z"/>'+
+  '<text text-anchor="middle" x="12" y="10" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+
+
+  // Rounded chat bubble with bottom left pointer
+  // Based on http://iconmonstr.com/speech-bubble-1/
+  var ChatBubbleSVG_5 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path  fill="#fff" stroke="#000" stroke-width="0.5"  d="M.054 23c.971-1.912 2.048-4.538 1.993-6.368-1.308-1.562-2.047-3.575-2.047-5.625 0-5.781 5.662-10.007 12-10.007 6.299 0 12 4.195 12 10.007 0 6.052-6.732 11.705-15.968 9.458-1.678 1.027-5.377 2.065-7.978 2.535z"/>'+
+  '<text text-anchor="middle" x="12" y="12" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Rounded chat bubble with bottom left pointer
+  // Based on http://iconmonstr.com/speech-bubble-1/
+  var ChatBubbleSVG_6 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path  fill="#fff" stroke="#000" stroke-width="0.5"  d="M 0.054,1 C 1.025,2.912 2.102,5.538 2.047,7.368 0.739,8.93 0,10.943 0,12.993 0,18.774 5.662,23 12,23 18.299,23 24,18.805 24,12.993 24,6.941 17.268,1.288 8.032,3.535 6.354,2.508 2.655,1.47 0.054,1 z"/>'+
+  '<text text-anchor="middle" x="12" y="13" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Rounded chat bubble with bottom right pointer
+  // Based on http://iconmonstr.com/speech-bubble-1/
+  var ChatBubbleSVG_7 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path  fill="#fff" stroke="#000" stroke-width="0.5"  d="M 23.946,23 C 22.975,21.088 21.898,18.462 21.953,16.632 23.261,15.07 24,13.057 24,11.007 24,5.226 18.338,1 12,1 5.701,1 0,5.195 0,11.007 c 0,6.052 6.732,11.705 15.968,9.458 1.678,1.027 5.377,2.065 7.978,2.535 z"/>'+
+  '<text text-anchor="middle" x="12" y="12" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // Rounded chat bubble with top right pointer
+  // Based on http://iconmonstr.com/speech-bubble-1/
+  var ChatBubbleSVG_8 = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">'+
+  '<g>'+
+  '<path  fill="#fff" stroke="#000" stroke-width="0.5"  d="M 23.946,1 C 22.975,2.912 21.898,5.538 21.953,7.368 23.261,8.93 24,10.943 24,12.993 24,18.774 18.338,23 12,23 5.701,23 0,18.805 0,12.993 0,6.941 6.732,1.288 15.968,3.535 17.646,2.508 21.345,1.47 23.946,1 z"/>'+
+  '<text text-anchor="middle" x="12" y="13" font-family="Verdana" font-size="3">'+
+  '  Hello BBC  '+
+  '</text>'+
+  '</g>'+
+  '</svg>';
+
+  // ----------------- End of shape definitions ------------------------------ //
+  
 
   function allowShapeTransformation(shape, isAllowed) {
     isAllowed = !isAllowed;
@@ -123,8 +248,8 @@
 
 
   // Add SVG element to canvas
-  // You can use a chat bubble by using the ChatBubbleSVG in stead of CircleSVG
-  var path = fabric.loadSVGFromString(CircleSVG,function(objects, options) {
+  // Use any one of the SVG elements: SquareSVG, CircleSVG, ChatBubbleSVG, ChatBubble2SVG, ChatBubble3SVG
+  var path = fabric.loadSVGFromString( ChatBubbleSVG_4,function(objects, options) {
 
     var _shape = fabric.util.groupSVGElements(objects, options);
 
